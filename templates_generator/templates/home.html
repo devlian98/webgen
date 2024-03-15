@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Template Generator</title>
+  </head>
+  <body>
+    <h1>Select Your Business Type</h1>
+    <form action="{% url 'generate_template' %}" method="post">
+      {% csrf_token %}
+      <select text-align="center" name="business_type">
+        {% for business_type in business_types %}
+        <option value="{{ business_type.id }}">{{ business_type.name }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit">Generate Template</button>
+    </form>
+  </body>
+</html>

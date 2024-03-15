@@ -1,0 +1,25 @@
+/* Features.css */
+.features {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 30px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.features li {
+  width: 200px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+}

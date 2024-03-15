@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Generation Input Form</title>
+  </head>
+  <body>
+    <h1>Text Generation Input Form</h1>
+    <form method="post" action="{% url 'generate_text' %}">
+      {% csrf_token %}
+      <label for="user_input">Enter text:</label><br />
+      <textarea id="user_input" name="user_input" rows="4" cols="50"></textarea
+      ><br />
+      <input type="submit" value="Generate Text" />
+    </form>
+  </body>
+</html>
